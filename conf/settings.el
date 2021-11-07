@@ -17,6 +17,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'monokai t)
 
+(setq ring-bell-function 'ignore)
 
 ;; Command-Key and Option-Key
 (setq ns-command-modifier (quote meta))
