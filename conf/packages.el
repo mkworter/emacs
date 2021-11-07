@@ -30,3 +30,23 @@
 (unless (package-installed-p 'magit)
   (package-refresh-contents)
   (package-install 'magit))
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(unless (package-installed-p 'helm)
+  (package-refresh-contents)
+  (package-install 'helm))
+
+(unless (package-installed-p 'helm-ag)
+  (package-refresh-contents)
+  (package-install 'helm-ag))
+
+(unless (package-installed-p 'helm-ls-git)
+  (package-refresh-contents)
+  (package-install 'helm-ls-git))
+
+(unless (package-installed-p 'helm-ghq)
+  (package-refresh-contents)
+  (package-install 'helm-ghq))
