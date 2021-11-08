@@ -11,13 +11,9 @@
   (package-refresh-contents)
   (package-install 'exec-path-from-shell))
 
-;; (unless (package-installed-p 'monokai-theme)
-;;   (package-refresh-contents)
-;;   (package-install 'monokai-theme))
-
-(unless (package-installed-p 'company)
+(unless (package-installed-p 'auto-complete)
   (package-refresh-contents)
-  (package-install 'company))
+  (package-install 'auto-complete))
 
 (unless (package-installed-p 'git-gutter)
   (package-refresh-contents)
