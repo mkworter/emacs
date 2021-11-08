@@ -20,6 +20,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(helm-mini-default-sources
+   '(helm-source-emacs-commands-history helm-source-emacs-commands helm-source-buffers-list helm-source-recentf helm-source-files-in-current-dir helm-source-ls-git))
  '(package-selected-packages '(exec-path-from-shell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
