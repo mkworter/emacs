@@ -82,9 +82,8 @@
 (setq frame-title-format (format "%%b"))
 
 ;; auto fill mode off
-;(auto-fill-mode -1)
-;(setq text-mode-hook 'turn-off-auto-fill)
-;(setq fill-column 200)
+(setq text-mode-hook 'turn-off-auto-fill)
+
 
 ;; exit
 (defadvice save-buffers-kill-emacs
@@ -108,7 +107,7 @@
         (add-to-list 'load-path default-directory)
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
-(add-to-load-path "elpa" "site-lisp")
+(add-to-load-path "elpa")
 (dolist (dir (list
               "/sbin"
               "/usr/sbin"

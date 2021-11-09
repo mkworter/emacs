@@ -99,3 +99,5 @@
 (unless (package-installed-p 'py-autopep8)
  (package-refresh-contents) (package-install 'py-autopep8))
 
+(unless (package-installed-p 'migemo)
+ (package-refresh-contents) (package-install 'migemo))
