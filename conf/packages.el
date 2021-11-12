@@ -7,6 +7,10 @@
 
 (package-initialize)
 
+(unless (package-installed-p 'monokai-theme)
+  (package-refresh-contents)
+  (package-install 'monokai-theme))
+
 (unless (package-installed-p 'exec-path-from-shell)
   (package-refresh-contents)
   (package-install 'exec-path-from-shell))

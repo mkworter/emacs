@@ -19,8 +19,14 @@
 (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
 
 ;; monokai
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'monokai t)
+
+(package-install 'highlight-symbol)
+(require 'highlight-symbol)
+(setq highlight-symbol-idle-delay 0.5) ;; highlight after 0.5s idle
+(add-hook 'prog-mode-hook 'highlight-symbol-mode) ;; turn on when programming lang file is open
+(add-hook 'prog-mode-hook 'highlight-symbol-nav-mode) ;; M-p/M-n でシンボル間の移動
+
 
 (setq ring-bell-function 'ignore)
 
@@ -31,7 +37,6 @@
 ;; FullScreen
 (setq ns-use-native-fullscreen nil)
 (define-key global-map (kbd "M-RET") 'toggle-frame-fullscreen)
-
 
 ;; hide menu, tool bar
 (tool-bar-mode 0)
