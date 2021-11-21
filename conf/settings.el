@@ -1,7 +1,7 @@
 ;; window
 (if window-system (progn
   ;; (setq initial-frame-alist '((width . 175) (height . 60) (top . 10) (left . 0)))
-  (setq initial-frame-alist '((width . 175) (height . 60)))
+  (setq initial-frame-alist '((width . 155) (height . 60)))
 ;  (set-background-color "White")
 ;  (set-foreground-color "Black")
   (set-frame-parameter nil 'alpha 100)
