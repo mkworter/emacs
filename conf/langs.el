@@ -40,7 +40,13 @@
 (autoload 'ac-robe-setup "ac-robe" "auto-complete robe" nil nil)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 
-; Yaml
+;; Json
+(add-hook 'js-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)))
+
+;; Yaml
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
 (define-key yaml-mode-map "\C-m" 'newline-and-indent)
@@ -58,4 +64,9 @@
 
 ;autopep8
 (require 'py-autopep8)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+(setq py-autopep8-options '("--max-line-length=200"))
+(setq flycheck-flake8-maximum-line-length 200)
+(define-key python-mode-map (kbd "C-c f") 'py-autopep8)          ; バッファ全体のコード整形
+(define-key python-mode-map (kbd "C-c F") 'py-autopep8-region)   ; 選択リジョン内のコード整形
+;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
