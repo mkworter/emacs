@@ -105,3 +105,6 @@
 
 (unless (package-installed-p 'migemo)
  (package-refresh-contents) (package-install 'migemo))
+
+(unless (package-installed-p 'highlight-indent-guides)
+ (package-refresh-contents) (package-install 'highlight-indent-guides))
