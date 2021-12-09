@@ -108,3 +108,6 @@
 
 (unless (package-installed-p 'highlight-indent-guides)
  (package-refresh-contents) (package-install 'highlight-indent-guides))
+
+(unless (package-installed-p 'mwim)
+ (package-refresh-contents) (package-install 'mwim))
