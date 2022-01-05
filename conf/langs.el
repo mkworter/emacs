@@ -77,4 +77,6 @@
   :custom
   (highlight-indent-guides-auto-enabled t)
   (highlight-indent-guides-responsive t)
-  (highlight-indent-guides-method 'character)) ; column
+  (highlight-indent-guides-method 'bitmap)) ; column
+
+(require 'terraform-mode)
