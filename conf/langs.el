@@ -80,3 +80,4 @@
 ;;   (highlight-indent-guides-method 'bitmap)) ; column
 
 (require 'terraform-mode)
+(add-hook 'terraform-mode-hook (lambda () (auto-complete-mode t)))
