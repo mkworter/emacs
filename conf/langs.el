@@ -54,20 +54,20 @@
 ;; Python
 (add-hook 'python-mode-hook (lambda () (auto-complete-mode -1)))
 ;elpy
-(elpy-enable)
-(setq elpy-rpc-virtualenv-path 'current)
+;; (elpy-enable)
+;; (setq elpy-rpc-virtualenv-path 'current)
 
-;Flycheck
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+;; ;Flycheck
+;; (when (require 'flycheck nil t)
+;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
 
-;autopep8
-(require 'py-autopep8)
-(setq py-autopep8-options '("--max-line-length=200"))
-(setq flycheck-flake8-maximum-line-length 200)
-(define-key python-mode-map (kbd "C-c f") 'py-autopep8)          ; バッファ全体のコード整形
-(define-key python-mode-map (kbd "C-c F") 'py-autopep8-region)   ; 選択リジョン内のコード整形
+;; ;autopep8
+;; (require 'py-autopep8)
+;; (setq py-autopep8-options '("--max-line-length=200"))
+;; (setq flycheck-flake8-maximum-line-length 200)
+;; (define-key python-mode-map (kbd "C-c f") 'py-autopep8)          ; バッファ全体のコード整形
+;; (define-key python-mode-map (kbd "C-c F") 'py-autopep8-region)   ; 選択リジョン内のコード整形
 ;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
 ;; (use-package highlight-indent-guides
